@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: archon-worker
+  threads:
+    virtual:
+      enabled: true
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/archon
+server:
+  port: 8082

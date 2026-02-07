@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  archon-discovery:
+    build: ./archon-discovery
+    container_name: archon-discovery
+    ports:
+      - "8761:8761"
+    deploy:
+      resources:
+        limits:
+          memory: 512M # Keep it light!
+    networks:
+      - archon-network
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine # 'alpine' is the smallest version
+    container_name: archon-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    networks:
+      - archon-network
+
+networks:
+  archon-network:
+    driver: bridge

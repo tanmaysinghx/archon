@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: archon-strategist
+  threads:
+    virtual:
+      enabled: true
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o
+server:
+  port: 8081
