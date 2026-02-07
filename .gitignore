@@ -1,0 +1,15 @@
+# Java / Spring
+target/
+*.jar
+*.class
+.mvn/
+.idea/
+
+# Angular
+node_modules/
+dist/
+.angular/
+
+# System / Secret
+.env
+.DS_Store
