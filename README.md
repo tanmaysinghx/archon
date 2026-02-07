@@ -39,26 +39,26 @@ The following diagram illustrates the high-level architecture of Archon, showcas
 ```mermaid
 graph TD
     subgraph "Frontend"
-        UI[User Frontend (Angular 17+)]
+        UI["User Frontend (Angular 17+)"]
     end
 
     subgraph "API Gateway"
-        Gateway[Archon Gateway]
+        Gateway["Archon Gateway"]
     end
 
     subgraph "Core Services"
-        Strategist[Strategist Service]
-        Librarian[Librarian Service]
-        Worker[Worker Service]
+        Strategist["Strategist Service"]
+        Librarian["Librarian Service"]
+        Worker["Worker Service"]
     end
 
     subgraph "Event Bus"
-        MQ{RabbitMQ / Kafka}
+        MQ{"RabbitMQ / Kafka"}
     end
 
     subgraph "Data Layer"
-        DB[(PostgreSQL)]
-        VectorDB[(PGVector Code Memory)]
+        DB[("PostgreSQL")]
+        VectorDB[("PGVector Code Memory")]
     end
 
     UI -->|REST/Stream| Gateway
